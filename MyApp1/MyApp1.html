@@ -1,0 +1,55 @@
+<head>
+  <title>MyApp1</title>
+</head>
+
+<body>
+  {{> test}}
+
+  {{> employees}}
+</body>
+
+<template name="test">
+  <h1>Employee</h1>
+
+  <input type="button" Value="New Employee" class="new_employee" />
+
+  <div class="employee_form">
+  	<input type="text" class="employee_name" placeholder="Name" />
+  	<input type="text" class="employee_ic" placeholder="IC Number" />
+  	<input type="text" class="employee_dob" placeholder="Birthday" />
+  	<input type="text" class="employee_email" placeholder="Email" />
+  	<input type="text" class="employee_phone" placeholder="Phone Number" />
+  	<input type="text" class="employee_address" placeholder="Address" />
+  	<input type="submit" class="employee_submit" />
+  </div>
+
+</template>
+
+<template name="employees">
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>IC Number</th>
+      <th>Birthday</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+      <th></th>
+    </tr>
+
+    {{#each peoples }}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{ic}}</td>
+        <td>{{dob}}</td>
+        <td>{{email}}</td>
+        <td>{{phone}}</td>
+        <td>{{address}}</td>
+        <td><a href="#" class="delete">Delete</a></td>
+      </tr>
+    {{/each}}
+
+  </table>
+
+</template>
