@@ -29,7 +29,7 @@ if (Meteor.isClient) {
 
   });
 
-  Template.employees.peoples = function() {
+  Template.employees.lists = function() {
     return Employees.find({});
   };
 
